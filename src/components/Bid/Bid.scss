@@ -1,0 +1,100 @@
+@import "../../App.scss";
+
+.bidForm{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: $c-1;
+    color: $c-5;
+    font-family: $Title-font;
+    text-align: center;
+   
+    h1{
+        position: absolute;
+        top: 1vh;
+        left: 25vw;
+        width: 50vw;
+    }
+    .column{
+        width: 50vw;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     //   justify-content: space-around;
+        color: white;
+        text-align: center;
+        z-index: 1;
+        .longInput{
+            height: 30vh;
+            width: 40vw;
+            position: absolute;
+            top: 23%;
+            color: white;
+            z-index: 2;
+        }
+        h6{
+            position: absolute;
+            top: 55%;
+            width: 40vw;
+            z-index: 2;
+        }
+        input{
+            position: absolute;
+            top: 72%;
+            border-color: $c-5;
+            background-color: $c-3;
+            font-family: $standard-font;
+            z-index: 2;
+        }
+    }
+    a{
+        z-index: 99;
+    }
+    button{
+        background-color: $c-5;
+        border-color: $c-5;
+        width: 30vw;
+        position: absolute;
+        bottom: 3vh;
+        left: 35vw;
+        z-index: 99;
+    }
+}
+
+//laptop 
+@media screen and(min-width: 1000px){
+    .bidForm{
+        h1{
+
+        }
+        .column{
+            .longInput{
+
+            }
+            h6{
+                font-size: 1.2em;
+                
+            }
+            input{
+                font-size: 2em;
+                
+            }
+        }
+        button{
+            width: 15vw;
+            height: 8vh;
+            border-radius: 30px;
+            font-family: $Title-font;
+            font-size: 1.5em;
+            left: 42vw;
+
+        }
+    }
+}

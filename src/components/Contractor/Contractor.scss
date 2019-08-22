@@ -1,0 +1,179 @@
+@import "../../App.scss";
+
+.contractorProfile{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../woodbackground.jpeg');
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    header{
+        width: 100vw;
+        height: 10vh;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1{
+            color: $c-5;
+            margin: 1%;
+            font-family: $header-font;
+        }
+
+        button{
+            margin: 1%;
+            background-color: $c-5;
+            border: 3px solid $c-5;
+            border-radius: 25px;
+            width: 20vw;
+            color: white;
+            font-family: $header-font;
+        }
+    }
+
+    .contractorInfo{
+        background-color: $c-1;
+        position: absolute;
+        top: 12vh;
+        left: 5vw;
+        width: 90vw;
+        height: 40vh;
+        border: 5px $c-5 solid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            width: 50%;
+            height: 70%;
+            margin: 2%;
+            border: 2px $c-5 solid;
+           
+        }
+        .inputs{
+            font-size: .75em;
+            width: 40%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            h3{
+                color: $white;
+            }
+            button{
+                background-color: $c-5;
+                border-color: $c-5;
+                border-radius: 10px;
+                color: white;
+            }
+            input{
+                width: 70%;
+            }
+        }
+       .bio{
+            width: 40%;
+            height: 70%;
+            margin: 2%;
+            background-color: black;
+            border: 2px $c-5 solid;
+            color: white;
+            text-align: center;
+            input{
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+                font-size: inherit;
+                border: none;
+                position: inherit;
+                font-size: 2em;
+                font-family: $header-font;
+            }
+
+        }
+    }
+    h2{
+        color: $c-5;
+        position: absolute;
+        top: 53vh;
+    }
+    .contractorFeed{
+        position: absolute;
+        top: 60vh;
+        width: 100vw;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+//laptops
+@media screen and(min-width: 1000px){
+    .contractorProfile{
+        header{
+            h1{
+
+            }
+            button{
+                width: 12vw;
+                height: 5vh;
+                margin-right: 2vw;
+                font-size: 1.5em;
+            }
+        }
+        .contractorInfo{
+            border: 10px solid $c-5;
+            img{
+                width: 40%;
+            }
+            .inputs{
+                border: 5px solid $c-5;
+                height: 90%;
+                width: 50%;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: space-between;
+                h3{
+                    font-size: 2em;
+                }
+                button{
+                    color: white;
+                    height: 3vh;
+
+                }
+                input{
+                    width: 40%;
+                    border: 2px solid $c-5;
+                    margin: 2%;
+                }
+                .bio{
+                    overflow: hidden;
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        background-color: inherit;
+                        font-size: inherit;
+                        border: none;
+                        position: inherit;
+                        font-size: 2em;
+                        font-family: $header-font;
+
+                    }
+                }
+            }
+        }
+        .contractorFeed{
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+        }
+    }
+}

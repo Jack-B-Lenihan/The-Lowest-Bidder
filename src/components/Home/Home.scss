@@ -1,0 +1,95 @@
+@import "../../App.scss";
+
+
+.landing{
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-color: $c-1;
+
+    h1{
+        color: white;
+        font-family: $Title-font;
+        margin: 5%;
+        text-align: center;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        height: 25%;
+        width: 35%;
+
+        .button{
+            background-color: white;
+            border-color: white;
+            height: 30%;
+            font-family: $Title-font;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.slideShow{
+    display: none;
+    width: 100vw;
+    height: 90vh;
+    background-color: $c-1;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+}
+
+/* tablets */
+@media screen and(min-width: 760px){
+    h1{
+        font-size: 3em;
+    }
+}
+
+/* laptop */
+@media screen and (min-width: 1200px){
+    .landing{
+        height: 10vh;
+        flex-direction: row;
+        background-color: $c-1;
+        justify-content: space-between;
+        h1{
+            font-size: 2em;
+            color: white;
+
+        }
+        div{
+            flex-direction: row;
+            align-items: center;
+            height: 80%;
+            text-align: center;
+            // width: 20%;
+            .button{
+                background-color: white;
+                width: 30%;
+
+            }
+        }
+    }
+
+    .slideShow{
+        display: block;
+    }
+}
