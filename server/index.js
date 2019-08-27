@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require('path'); // Usually moved to the start of file
 const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
@@ -134,4 +135,10 @@ app.get('/project/contractorFeed', projectCtrl.getAll);
 app.get('/project/clientFeed', projectCtrl.getClientProjects);
 
 // connection
+
+app.use( express.static( `${__dirname}/../build` ) );
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+});
+
 app.listen(SERVER_PORT, () => console.log(`server listening on port: ${SERVER_PORT}`))
