@@ -6,7 +6,6 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const nodemailer = require('nodemailer');
-const path = require('path');
 const contractCtrl = require('./controllers/contractorController');
 const projectCtrl = require('./controllers/projectController');
 const clientCtrl = require('./controllers/clientController');
